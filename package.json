@@ -2,6 +2,7 @@
   "name": "gulp-wordpress-workflow",
   "version": "1.0.0",
   "description": "For creating static landing pages.",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/moxdev/gulp-static-site-workflow"
@@ -25,6 +26,7 @@
     "eslint": "^6.5.1",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
+    "gulp-concat": "^2.6.1",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
@@ -33,6 +35,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-unzip": "^1.1.0",
+    "minimatch": "^3.0.4",
     "rollup": "^1.25.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",

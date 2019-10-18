@@ -27,7 +27,10 @@ import babel from 'rollup-plugin-babel';
 import beep from 'beepbeep';
 import { create } from 'browser-sync';
 import commonjs from 'rollup-plugin-commonjs';
+import concat from 'gulp-concat';
 import cssnano from 'cssnano';
+import del from 'del';
+import minimatch from 'minimatch';
 import newer from 'gulp-newer';
 import notify from 'gulp-notify';
 import plumber from 'gulp-plumber';
@@ -38,6 +41,7 @@ import rollup from 'gulp-better-rollup';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'rollup-plugin-uglify';
+import unzip from 'gulp-unzip';
 
 const browserSync = create();
 
@@ -128,6 +132,30 @@ export function jsVendor() {
     .pipe( browserSync.stream() )
     .pipe( notify( { message: '✅ 👍 ✅   Completed Task: "jsVendor"', onLast: true } ) );
 }
+/**
+ * Task: `unzipFonts`.
+ * * Compiles Vendor JS: Create sourcemaps, transpile with Babel, rename file, minify output
+ * * copies js files to dist/js/min
+ * Run with `gulp js`
+ */
+export function unzipFonts() {
+  return src( config.fontsSrc, { allowEmpty: true } )
+    .pipe( unzip() )
+    .pipe( dest( config.fontsDest ) )
+    .pipe( browserSync.stream() )
+    .pipe( notify( { message: '✅ 👍 ✅   Completed Task: "unzipFonts"', onLast: true } ) );
+}
+// export function unzipFonts() {
+//   return src( config.fontsSrc, { allowEmpty: true } )
+//     .pipe( unzip( {
+//       filter( entry ) {
+//         return minimatch( entry.path, config.fontsInclude );
+//       },
+//     } ) )
+//     .pipe( dest( config.fontsDest ) )
+//     .pipe( browserSync.stream() )
+//     .pipe( notify( { message: '✅ 👍 ✅   Completed Task: "unzipFonts"', onLast: true } ) );
+// }
 
 /**
  * Task: `watchFiles`.

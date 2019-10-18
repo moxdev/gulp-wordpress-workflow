@@ -8,20 +8,26 @@
  */
 
 module.exports.config = {
-  projectURL: 'http://expedite-delivery-system.test/',
+  projectURL: 'http://wpgulp.test/',
 
-  sassSrc: '/sass/**/*.scss',
+  sassSrc: './sass/**/*.scss',
   sassDest: './',
 
-  jsSrc: '/js/*.js',
-  jsDest: '/js/min/',
+  jsSrc: './js/*.js',
+  jsDest: './js/min/',
 
-  phpSrc: '/**/*.php',
-  phpDest: '/**/*.php',
+  jsVendorSrc: './js/vendor/**/*.js',
+  jsVendorDest: './js/min/',
 
-  fonstSrc: '/fonts/*',
-  fonstDest: '/fonts/',
+  phpSrc: './**/*.php',
+  phpDest: './**/*.php',
 
-  imgsSrc: '/imgs/*',
-  imgsDest: '/imgs/',
+  fontsSrc: './fonts/*.{tar,tar.bz2,tar.gz,zip}',
+  fontsDest: './fonts/',
+  fontsInclude: '**/*.{svg,ttf,otf,eot,woff,woff2}',
+  fontsCSSInclude: '**/*.css',
+  fontsSassFilename: '_fonts.scss',
+
+  imgsSrc: './imgs/*',
+  imgsDest: './imgs/',
 };
