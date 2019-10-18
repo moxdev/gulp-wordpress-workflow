@@ -1,0 +1,18 @@
+# Ignore all directories called node_modules in current folder and any subfolders.
+node_modules/
+/node_modules/
+
+# OS generated files #
+######################
+**.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+error_log
+
+# SASS #
+##########
+**/.sass-cache
+**/.sass-cache/*
+**/.map
