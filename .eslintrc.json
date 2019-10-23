@@ -3,7 +3,7 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true  // need this to quiet eslint for exports undefined
+    "node": true
   },
   "globals": {
     "google": true,
