@@ -1,7 +1,8 @@
 # Gulp WordPress Theme Workflow
 
 ![Version 1.0.0](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)
-![Gulp 4.0.2](https://img.shields.io/badge/gulp-4.0.2-red)
+![Gulp 4.0.2](https://img.shields.io/badge/gulp-4.0.2-red.svg)
+![Babel 7.6.4](https://img.shields.io/badge/@babel/core-7.6.4-yellow.svg)
 
 Gulp workflow for WP theme development using [_s](http://underscores.me/).
 
