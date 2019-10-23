@@ -11,10 +11,11 @@ Gulp workflow for WP theme development using [_s](http://underscores.me/).
 
 ## Features:
 
-1. Browser refreshing using BrowserSync
-2. Sass compilation, mapping, auto-prefixing
-3. Javascript transpiling with Babel, minification, mapping
-4. JS linting with ES Lint through VSCode.
+1. Uses ES6 imports with Babel configurations
+2. Browser refreshing using BrowserSync
+3. Sass compilation, mapping, auto-prefixing
+4. Javascript transpiling with Babel, minification, mapping
+5. JS linting with ES Lint through VSCode.
 
 ## Installation:
 
